@@ -4,10 +4,11 @@ import Logo from "./assets/Logo";
 
 export default function Print99() {
   return (
-    <div className="print:block text-rich-black flex">
-      <Receipt />
-
-      <Receipt />
+    <div className="hidden print:block text-rich-black">
+      <div className="flex">
+        <Receipt styles="border-r border-rich-black border-dashed" />
+        <Receipt />
+      </div>
     </div>
   );
 }
