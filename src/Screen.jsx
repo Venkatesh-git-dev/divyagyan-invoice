@@ -5,12 +5,21 @@ import ctx from "./ctx";
 export default function Screen99() {
   return (
     <>
-      <div className="block print:hidden w-screen min-h-screen bg-slate-900 text-white p-16">
+      <div className="relative block print:hidden w-screen min-h-screen bg-slate-900 text-white p-16">
         <div className="container mx-auto max-w-6xl min-h-full bg-slate-800 rounded-2xl p-10 overflow-x-hidden">
           <Header />
           <Form />
           <Table />
           <Footer />
+          <div className="absolute bottom-2 right-4 font-light text-xs">
+            Thanks to freepik for placeholder logo check them out @{" "}
+            <a
+              className="text-blue-500 underline hover:no-underline"
+              href="https://www.freepik.com"
+            >
+              Freepik.com
+            </a>
+          </div>
         </div>
       </div>
     </>
