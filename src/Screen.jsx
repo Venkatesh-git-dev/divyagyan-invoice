@@ -339,39 +339,42 @@ function Footer() {
             type="button"
             className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-10 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
             onClick={() => {
-              let err = false;
+              let errMsg = "";
+              let errCount = 0;
 
               if (student.stdName.trim().length == 0) {
-                alert("student name is empty");
-                err = true;
+                errCount++;
+                errMsg += errCount + "." + " student name is empty\n";
               }
 
               if (student.stdRoll.trim().length == 0) {
-                alert("roll no. is empty");
-                err = true;
+                errCount++;
+                errMsg += errCount + "." + " roll no. is empty\n";
               }
 
               if (student.stdClass.trim().length == 0) {
-                alert("class is empty");
-                err = true;
+                errCount++;
+                errMsg += errCount + "." + " class is empty\n";
               }
 
               if (billMeta.month.trim().length == 0) {
-                alert("month is empty");
-                err = true;
+                errCount++;
+                errMsg += errCount + "." + " month is empty\n";
               }
 
               if (billMeta.date.trim().length == 0) {
-                alert("roll no. is empty");
-                err = true;
+                errCount++;
+                errMsg += errCount + "." + " Date is empty\n";
               }
 
               if (billInfo.length == 0) {
-                alert("add some particulars");
-                err = true;
+                errCount++;
+                errMsg += errCount + "." + " add some particulars\n";
               }
 
-              if (!err) {
+              if (errCount) {
+                alert("cannot print becuase of:\n" + errMsg);
+              } else {
                 window.print();
               }
             }}
