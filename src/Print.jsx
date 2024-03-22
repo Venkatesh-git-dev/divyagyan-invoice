@@ -4,7 +4,7 @@ import ctx from "./ctx";
 export default function Print99() {
   const receiptNo = Date.now();
   return (
-    <div className="block print:block text-rich-black">
+    <div className=" print:block text-rich-black">
       <div className="flex">
         <Receipt
           styles="border-r border-rich-black border-dashed"
@@ -67,11 +67,7 @@ function Receipt({ styles = "", receiptNo }) {
           Fee Receipt
         </p>
         <div>
-          <img
-            src="/public/school_logo-black.png"
-            alt="school logo"
-            width="128px"
-          />
+          <img src="/school_logo-black.png" alt="school logo" width="128px" />
         </div>
 
         <p className="font-bold text-xl">Divyagyan jyoti</p>

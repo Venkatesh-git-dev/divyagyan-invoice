@@ -22,7 +22,7 @@ function Header() {
       <div className="flex justify-center">
         <div className="flex flex-col gap-4 items-center text-center">
           <img
-            src="/public/school_logo-white.png"
+            src="/school_logo-white.png"
             alt="divyagyan jyoti school"
             width="128px"
             className=" opacity-60"
