@@ -1,5 +1,4 @@
 import { useContext, useEffect, useState } from "react";
-import Logo from "./assets/Logo";
 import ctx from "./ctx";
 
 export default function Screen99() {
@@ -11,15 +10,6 @@ export default function Screen99() {
           <Form />
           <Table />
           <Footer />
-          <div className="absolute bottom-2 right-4 font-light text-xs">
-            Thanks to freepik for placeholder logo check them out @{" "}
-            <a
-              className="text-blue-500 underline hover:no-underline"
-              href="https://www.freepik.com"
-            >
-              Freepik.com
-            </a>
-          </div>
         </div>
       </div>
     </>
@@ -31,7 +21,12 @@ function Header() {
     <header className="mb-20">
       <div className="flex justify-center">
         <div className="flex flex-col gap-4 items-center text-center">
-          <Logo fill="white" height="32" width="32" />
+          <img
+            src="/public/school_logo-white.png"
+            alt="divyagyan jyoti school"
+            width="128px"
+            className=" opacity-60"
+          />
           <div>
             <p className="uppercase font-semibold text-lg">divyagyan jyoti</p>
             <p className="uppercase font-extralight text-xs">
