@@ -4,7 +4,7 @@ import ctx from "./ctx";
 export default function Print99() {
   const receiptNo = Date.now();
   return (
-    <div className=" print:block text-rich-black">
+    <div className="hidden print:block text-rich-black">
       <div className="flex">
         <Receipt
           styles="border-r border-rich-black border-dashed"
