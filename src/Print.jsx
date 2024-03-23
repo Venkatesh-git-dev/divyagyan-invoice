@@ -9,8 +9,9 @@ export default function Print99() {
         <Receipt
           styles="border-r border-rich-black border-dashed"
           receiptNo={receiptNo}
+          copy="office"
         />
-        <Receipt receiptNo={receiptNo} />
+        <Receipt receiptNo={receiptNo} copy="school" />
       </div>
     </div>
   );
@@ -39,7 +40,7 @@ const toWords = new ToWords({
   },
 });
 
-function Receipt({ styles = "", receiptNo }) {
+function Receipt({ styles = "", receiptNo, copy }) {
   const { student, billMeta, billInfo } = useContext(ctx);
 
   const [bill, setBill] = useState([]);
@@ -63,9 +64,10 @@ function Receipt({ styles = "", receiptNo }) {
   return (
     <div className={`h-[8.26in] w-[5.82in] p-8 ${styles} text-base`}>
       <header className="text-center capitalize w-full flex flex-col items-center">
-        <p className="uppercase underline tracking-wider font-semibold">
-          Fee Receipt
-        </p>
+        <div className="tracking-wider">
+          <span className="uppercase underline font-semibold">Fee Receipt</span>
+          <span className="ml-2">({copy} copy)</span>
+        </div>
         <div>
           <img src="/school_logo-black.png" alt="school logo" width="128px" />
         </div>
